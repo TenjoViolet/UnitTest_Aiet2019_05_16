@@ -10,8 +10,11 @@ namespace UnitTestLab1
     {
         private static void Main(string[] args)
         {
-            var service = new Service();
-            var result = service.ValidateMember("admin", "admin123");
+            //var service = new Service();
+            //var result = service.ValidateMember("admin", "admin123");
+            ShareService shareService = new ShareService();
+            string result = "";
+            result = shareService.ValidateMember("admin", "admin123");
 
             Console.WriteLine(result);
             Console.ReadKey();

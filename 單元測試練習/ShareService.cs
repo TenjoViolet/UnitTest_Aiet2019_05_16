@@ -27,26 +27,15 @@ namespace UnitTestLab1
             return dtMember;
         }
 
-        //public string ValidateMember(string account, string password)
-        //{
-            
-        //    DataTable dtMember = new DataTable();
-        //    dtMember = GetDtMember(account);
+        public string ValidateMember(string account, string password)
+        {
+            string strMsg = "";
+            strMsg = ValidateMemberNoAccount(account,password);
+            strMsg = ValidateMemberPasswordError(account, password);
+            strMsg = ValidateMemberSuccess(account, password);
+            return strMsg;
 
-        //    if (dtMember.Rows.Count == 0)
-        //    {
-        //        return "No Account!"; 
-        //    }
-        //    else if (dtMember.Rows[0]["password"].ToString() != password)
-        //    {
-        //        return "Password Error!";
-        //    }
-        //    else
-        //    {
-        //        return "Success!";
-        //    }
-
-        //}
+        }
 
 
         public string ValidateMemberNoAccount(string account, string password)

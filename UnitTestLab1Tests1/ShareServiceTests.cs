@@ -44,5 +44,21 @@ namespace UnitTestLab1.Tests
 
             Assert.AreEqual(expected, actual);
         }
+
+        [TestMethod()]
+        public void ValidateMemberSuccessTest_傳入帳號密碼_若有此帳號且密碼正確_回傳Success()
+        {
+            ShareService shareService = new ShareService();
+            string account = "";
+            string password = "";
+            string expected = "";
+            string actual = "";
+            account = "admin";
+            password = "admin123";
+            expected = "Success!";
+            actual = shareService.ValidateMemberSuccess(account, password);
+
+            Assert.AreEqual(expected, actual);
+        }
     }
 }

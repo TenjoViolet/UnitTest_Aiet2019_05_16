@@ -12,9 +12,13 @@ namespace UnitTestLab1
         {
             //var service = new Service();
             //var result = service.ValidateMember("admin", "admin123");
-            ShareService shareService = new ShareService();
+            //ShareService shareService = new ShareService();
+            //string result = "";
+            //result = shareService.ValidateMember("admin", "admin123");
+
+            Share2Service share2Service = new Share2Service(new DBRepository());
             string result = "";
-            result = shareService.ValidateMember("admin", "admin123");
+            result = share2Service.ValidateMember("admin", "admin123");
 
             Console.WriteLine(result);
             Console.ReadKey();

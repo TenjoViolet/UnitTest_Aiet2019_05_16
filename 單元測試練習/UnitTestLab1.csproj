@@ -60,9 +60,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataBaseRepository.cs" />
+    <Compile Include="DBRepository.cs" />
+    <Compile Include="IDBRepository.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service.cs" />
+    <Compile Include="Share2Service.cs" />
     <Compile Include="ShareService.cs" />
   </ItemGroup>
   <ItemGroup>

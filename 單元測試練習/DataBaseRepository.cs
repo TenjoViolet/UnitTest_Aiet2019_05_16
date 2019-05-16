@@ -46,6 +46,20 @@ namespace UnitTestLab1
 
         }
 
+        public DataTable GetDtMember(string account)
+        {
+            DataBaseRepository dbr = new DataBaseRepository();
+            DataTable dtMember = new DataTable();
+            ArrayList aryFild = new ArrayList();
+            ArrayList aryValue = new ArrayList();
+            string strSql = "";
+            strSql = @" select * from Member where account=@account  ";
+            aryFild.Add("account");
+            aryValue.Add(account);
 
+            dtMember = dbr.SelectDataTable(dbr.GetConnString(), strSql, aryFild, aryValue);
+
+            return dtMember;
+        }
     }
 }

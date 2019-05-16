@@ -26,8 +26,23 @@ namespace UnitTestLab1.Tests
 
             Assert.AreEqual(expected, actual);
 
-            // Assert.Fail();
 
+        }
+
+        [TestMethod()]
+        public void ValidateMemberPasswordErrorTest_傳入帳號密碼_若有此帳號但密碼錯誤_回傳PasswordError()
+        {
+            ShareService shareService = new ShareService();
+            string account = "";
+            string password = "";
+            string expected = "";
+            string actual = "";
+            account = "admin";
+            password = "adminErr";
+            expected = "Password Error!";
+            actual = shareService.ValidateMemberPasswordError(account, password);
+
+            Assert.AreEqual(expected, actual);
         }
     }
 }
